@@ -42,7 +42,7 @@ Step-Audio is the first production-ready open-source framework for intelligent s
 
 - **130B-Parameter Multimodal Model**: A single unified model integrating comprehension and generation capabilities, performing speech recognition, semantic understanding, dialogue, voice cloning, and speech synthesis. We have made the 130B Step-Audio-Chat variant open source.
 
-- **Generative Data Engine**: Eliminates traditional TTS's reliance on manual data collection by generating high-quality audio through our 130B-parameter multimodal model. Leverages this data to train and publicly release a resource-efficient Step-Audio-TTS-3B model with enhanced instruction-following capabilities for controllable speech synthesis.
+- **Generative Data Engine**: Eliminates traditional Text-to-Speech softwares reliance on manual data collection by generating high-quality audio through our 130B-parameter multimodal model. Leverages this data to train and publicly release a resource-efficient Step-Audio-TTS-3B model with enhanced instruction-following capabilities for controllable speech synthesis.
 
 - **Granular Voice Control**: Enables precise regulation through instruction-based control design, supporting multiple emotions (anger, joy, sadness), dialects (Cantonese, Sichuanese, etc.), and vocal styles (rap, a cappella humming) to meet diverse speech generation needs.
 
@@ -58,8 +58,7 @@ We implement a token-level interleaving approach to effectively integrate semant
 
 ### 2.2 Language Model
 
-To enhance Step-Audio’s ability to effectively process speech information and
-achieve accurate speech-text alignment, we conducted audio continual pretrain-ing based on Step-1, a 130-billion parameter pretrained text-based large language model (LLM).
+To enhance Step-Audio’s ability to effectively process speech information and achieve accurate speech-text alignment, we conducted audio continual pretrain-ing based on Step-1, a 130-billion parameter pretrained text-based large language model (LLM).
 
 ### 2.3 Speech Decoder
 The speech decoder in Step-Audio serves a critical function in converting discrete speech tokens, which contain both semantic and acoustic information, into continuous time-domain waveforms that represent natural speech. The decoder architecture incorporates a flow matching model and a mel-to-wave vocoder. To optimize the intelligibility and naturalness of the synthesized speech, the speech decoder is trained using a dual-code interleaving approach, ensuring seamless integration of semantic and acoustic features throughout the generation process.
@@ -437,7 +436,7 @@ vllm serve where_you_download_dir/Step-Audio-Chat --dtype auto -tp $tp --served-
 </table>
 
 ### 5.3 AQTA Chat
-We release [**StepEval-Audio-360**](https://huggingface.co/datasets/stepfun-ai/StepEval-Audio-360) as a new benchmark, which consists of 137 multi-turn Chinese prompts sourced from real users and is designed to evaluate the quality of generated response across the following dimensions: Voice Instruction Following, Voice Understanding, Logical Reasoning, Role-playing, Creativity, Sing, Language Ability, Speech Emotion Control, Gaming.
+We released [**StepEval-Audio-360**](https://huggingface.co/datasets/stepfun-ai/StepEval-Audio-360) as a new benchmark, which consists of 137 multi-turn Chinese prompts sourced from real users and is designed to evaluate the quality of generated response across the following dimensions: Voice Instruction Following, Voice Understanding, Logical Reasoning, Role-playing, Creativity, Singing, Language Ability, Speech Emotion Control, and Gaming.
 
 #### 5.3.1 StepEval-Audio-360
 
